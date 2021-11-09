@@ -17,7 +17,7 @@ const routes = [
   },
   {
     path: '/',
-    name: 'UIC | Vue Template',
+    name: 'Experior | Workout Tracker',
     component: Login,
     meta: {
       title: 'Vue Template',

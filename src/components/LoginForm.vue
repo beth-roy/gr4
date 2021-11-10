@@ -2,9 +2,9 @@
 <div class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
   <div class="max-w-md w-full space-y-8">
     <div>
-      <img class="mx-auto h-12 w-auto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/University_of_Illinois_at_Chicago_circle_logo.svg/1200px-University_of_Illinois_at_Chicago_circle_logo.svg.png" alt="Workflow">
+      <img class="mx-auto h-12 w-auto" src="https://cdn.iconscout.com/icon/free/png-256/barbells-20-160914.png" alt="Workflow">
       <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
-       {{ $t("sign-in-text") }}  
+       Experior Workout Tracker 
       </h2>
     </div>
     <form class="mt-8 space-y-6" action="#" method="POST">

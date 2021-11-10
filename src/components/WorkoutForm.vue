@@ -225,15 +225,15 @@ Save workout
               
 <div>
   <div class="flow-root mt-6">
-    <ul role="list" class="-my-5 divide-y divide-gray-200">
-      <li class="py-4">
+    <ul role="list"  class="-my-5 divide-y divide-gray-200">
+      <li class="py-4" v-for="exercise in exerciseList" :key="exercise.name">
         <div class="flex items-center space-x-4">
           <div class="flex-shrink-0">
             <img class="h-8 w-8 rounded-full" src="https://cdn-icons-png.flaticon.com/512/2647/2647657.png" alt="">
           </div>
           <div class="flex-1 min-w-0">
             <p class="text-sm font-medium text-gray-900 truncate">
-              Plank
+              {{exercise.name}}
             </p>
             <p class="text-sm text-gray-500 truncate">
               ISOMETRIC
@@ -247,47 +247,7 @@ Save workout
         </div>
       </li>
 
-      <li class="py-4">
-        <div class="flex items-center space-x-4">
-          <div class="flex-shrink-0">
-            <img class="h-8 w-8 rounded-full" src="https://cdn-icons-png.flaticon.com/512/3043/3043271.png" alt="">
-          </div>
-          <div class="flex-1 min-w-0">
-            <p class="text-sm font-medium text-gray-900 truncate">
-              Squat
-            </p>
-            <p class="text-sm text-gray-500 truncate">
-              CONCENTRIC
-            </p>
-          </div>
-          <div>
-            <a href="#" class="inline-flex items-center shadow-sm px-2.5 py-0.5 border border-gray-300 text-sm leading-5 font-medium rounded-full text-gray-700 bg-white hover:bg-gray-50">
-              Add
-            </a>
-          </div>
-        </div>
-      </li>
 
-      <li class="py-4">
-        <div class="flex items-center space-x-4">
-          <div class="flex-shrink-0">
-            <img class="h-8 w-8 rounded-full" src="https://cdn-icons-png.flaticon.com/512/2548/2548530.png" alt="">
-          </div>
-          <div class="flex-1 min-w-0">
-            <p class="text-sm font-medium text-gray-900 truncate">
-              Push Up
-            </p>
-            <p class="text-sm text-gray-500 truncate">
-              ECCENTRIC
-            </p>
-          </div>
-          <div>
-            <a href="#" class="inline-flex items-center shadow-sm px-2.5 py-0.5 border border-gray-300 text-sm leading-5 font-medium rounded-full text-gray-700 bg-white hover:bg-gray-50">
-              Add
-            </a>
-          </div>
-        </div>
-      </li>
 
 
     </ul>
@@ -316,5 +276,26 @@ Save workout
 <script>
 export default {
   name: "WorkoutForm",
+  data() {
+    return {
+      workoutList : [],
+     exerciseList : [
+               {name : "Push Up",
+        type : "CONCENTRIC"},
+                {name : "Squat",
+        type : "ECCENTRIC"},
+          {name : "Plank",
+        type : "ISOMETRIC"}
+     ],
+
+     
+    };
+  },
+  methods: {
+   logHello(){
+     console.log("hello!!!")
+   }
+  }
 };
+
 </script>

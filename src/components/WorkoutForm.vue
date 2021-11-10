@@ -229,14 +229,14 @@ Save workout
       <li class="py-4" v-for="exercise in exerciseList" :key="exercise.name">
         <div class="flex items-center space-x-4">
           <div class="flex-shrink-0">
-            <img class="h-8 w-8 rounded-full" src="https://cdn-icons-png.flaticon.com/512/2647/2647657.png" alt="">
+            <img class="h-8 w-8 rounded-full" :src="exercise.icon" alt="">
           </div>
           <div class="flex-1 min-w-0">
             <p class="text-sm font-medium text-gray-900 truncate">
               {{exercise.name}}
             </p>
             <p class="text-sm text-gray-500 truncate">
-              ISOMETRIC
+              {{exercise.type}}
             </p>
           </div>
           <div>
@@ -246,10 +246,6 @@ Save workout
           </div>
         </div>
       </li>
-
-
-
-
     </ul>
   </div>
   <div class="mt-6">
@@ -281,14 +277,15 @@ export default {
       workoutList : [],
      exerciseList : [
                {name : "Push Up",
-        type : "CONCENTRIC"},
+        type : "CONCENTRIC",
+        icon: "https://cdn-icons-png.flaticon.com/512/2548/2548530.png"},
                 {name : "Squat",
-        type : "ECCENTRIC"},
+        type : "ECCENTRIC",
+        icon : "https://cdn-icons-png.flaticon.com/512/3043/3043290.png"},
           {name : "Plank",
-        type : "ISOMETRIC"}
+        type : "ISOMETRIC",
+        icon: "https://cdn-icons-png.flaticon.com/512/2647/2647657.png"}
      ],
-
-     
     };
   },
   methods: {

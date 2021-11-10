@@ -26,7 +26,7 @@
             <div>
               <button type="button" class="bg-white rounded-full flex text-sm ring-2 ring-white ring-opacity-20 focus:outline-none focus:ring-opacity-100" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                 <span class="sr-only">Open user menu</span>
-                <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                <img class="h-8 w-8 rounded-full" src="https://www.doyonutilities.com/wp-content/uploads/profile-icon.png" alt="">
               </button>
             </div>
 
@@ -173,7 +173,7 @@ Save workout
           <div class="pt-4 pb-2">
             <div class="flex items-center px-5">
               <div class="flex-shrink-0">
-                <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                <img class="h-10 w-10 rounded-full" src="https://www.doyonutilities.com/wp-content/uploads/profile-icon.png" alt="">
               </div>
               <div class="ml-3 min-w-0 flex-1">
                 <div class="text-base font-medium text-gray-800 truncate">Tom Cook</div>
@@ -210,7 +210,49 @@ Save workout
             <h2 class="sr-only" id="section-1-title">Section title</h2>
             <div class="rounded-lg bg-white overflow-hidden shadow">
               <div class="p-6">
-                <!-- Your content -->
+                <!-- This example requires Tailwind CSS v2.0+ -->
+<div class="bg-white shadow overflow-hidden sm:rounded-md">
+  <ul role="list" class="divide-y divide-gray-200">
+    <li v-for="exercise in workoutList" :key="exercise.name">
+      <a href="#" class="block hover:bg-gray-50">
+        <div class="flex items-center px-4 py-4 sm:px-6">
+          <div class="min-w-0 flex-1 flex items-center">
+            <div class="flex-shrink-0">
+              <img class="h-12 w-12 rounded-full" :src="exercise.icon" alt="">
+            </div>
+            <div class="min-w-0 flex-1 px-4 md:grid md:grid-cols-2 md:gap-4">
+              <div>
+                <p class="text-sm font-medium text-indigo-600 truncate">{{exercise.name}}</p>
+                <p class="mt-2 flex items-center text-sm text-gray-500">
+                  <!-- Heroicon name: solid/mail -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+</svg>
+                  <span class="truncate">{{exercise.type}}</span>
+                </p>
+              </div>
+              <div class="hidden md:block">
+              <div class="relative border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
+  <label for="name" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Sets</label>
+  <input type="number" name="name" id="name" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" placeholder="Insert your sets">
+</div>
+              <div class="relative border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
+  <label for="name" class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900">Reps</label>
+  <input type="number" name="name" id="name" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" placeholder="Insert your reps">
+</div>
+              </div>
+            </div>
+          </div>
+    
+        </div>
+      </a>
+    </li>
+
+
+
+
+  </ul>
+</div>
               </div>
             </div>
           </section>

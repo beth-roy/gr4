@@ -1,21 +1,15 @@
 <template>
-<div>
- <HomeMenu />
-
-</div>
+<ProgressForm/>
 </template>
 
 <script>
-import HomeMenu from "../components/HomeMenu.vue";
 
-
+import ProgressForm from "../components/ProgressForm.vue";
 
 export default {
-  name: "Home",
+  name: "Progress",
   components: {
-   // AppMenu,
-   HomeMenu,
-
+    ProgressForm
 
   },
   data() {

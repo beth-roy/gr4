@@ -1,21 +1,15 @@
 <template>
-<div>
- <HomeMenu />
-
-</div>
+    <WorkoutForm />
 </template>
 
 <script>
-import HomeMenu from "../components/HomeMenu.vue";
-
+import WorkoutForm from "../components/WorkoutForm.vue";
 
 
 export default {
-  name: "Home",
+  name: "WorkoutRoutine",
   components: {
-   // AppMenu,
-   HomeMenu,
-
+    WorkoutForm,
 
   },
   data() {

@@ -2,6 +2,8 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../routes/Home.vue";
 import Login from "../routes/Login.vue";
+import WorkoutRoutine from "../routes/WorkoutRoutine.vue";
+import Progress from "../routes/Progress.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -14,6 +16,21 @@ const routes = [
     path: "/login",
     name: "login",
     component: Login
+  },
+  {
+    path: "/progress",
+    name: "progress",
+    component: Progress
+  },
+  {
+    path: "/create-workout",
+    name: "create-workout",
+    component: WorkoutRoutine
+  },
+  {
+    path: "/home",
+    name: "home",
+    component: Home
   },
   {
     path: '/',

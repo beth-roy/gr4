@@ -10,7 +10,6 @@
             <img class="h-8 w-auto" src="https://cdn.iconscout.com/icon/free/png-256/barbells-20-160914.png" alt="Workflow">
           </a>
         </div>
-
         <!-- Right section on desktop -->
         <div class="hidden lg:ml-4 lg:flex lg:items-center lg:pr-0.5">
           <button type="button" class="flex-shrink-0 p-1 text-indigo-200 rounded-full hover:text-white hover:bg-white hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-white">
@@ -20,35 +19,13 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
             </svg>
           </button>
-
-          <!-- Profile dropdown -->
+          <!-- Profile -->
           <div class="ml-4 relative flex-shrink-0">
             <div>
               <button type="button" class="bg-white rounded-full flex text-sm ring-2 ring-white ring-opacity-20 focus:outline-none focus:ring-opacity-100" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                 <span class="sr-only">Open user menu</span>
                 <img class="h-8 w-8 rounded-full" src="https://www.doyonutilities.com/wp-content/uploads/profile-icon.png" alt="">
               </button>
-            </div>
-
-            <!--
-              Dropdown menu, show/hide based on menu state.
-
-              Entering: ""
-                From: ""
-                To: ""
-              Leaving: "transition ease-in duration-75"
-                From: "transform opacity-100 scale-100"
-                To: "transform opacity-0 scale-95"
-            -->
-            <div class="hidden origin-top-right z-40 absolute -right-2 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-              <!-- Active: "bg-gray-100", Not Active: "" -->
-              <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
-
-              <!-- Active: "bg-gray-100", Not Active: "" -->
-              <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
-
-              <!-- Active: "bg-gray-100", Not Active: "" -->
-              <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
             </div>
           </div>
         </div>
@@ -60,30 +37,6 @@
             <div class="relative text-white focus-within:text-gray-600">
                </div>
           </div>
-        </div>
-
-        <!-- Menu button -->
-        <div class="absolute right-0 flex-shrink-0 lg:hidden">
-          <!-- Mobile menu button -->
-          <button type="button" class="bg-transparent p-2 rounded-md inline-flex items-center justify-center text-indigo-200 hover:text-white hover:bg-white hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-white" aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
-            <!--
-              Heroicon name: outline/menu
-
-              Menu open: "hidden", Menu closed: "block"
-            -->
-            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-            <!--
-              Heroicon name: outline/x
-
-              Menu open: "block", Menu closed: "hidden"
-            -->
-            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
         </div>
       </div>
       <div class="hidden lg:block border-t border-white border-opacity-20 py-5">
@@ -104,83 +57,8 @@
         </div>
       </div>
     </div>
-
-    <!-- Mobile menu, show/hide based on mobile menu state. -->
     <div class="lg:hidden">
-      <!--
-        Mobile menu overlay, show/hide based on mobile menu state.
-
-        Entering: "duration-150 ease-out"
-          From: "opacity-0"
-          To: "opacity-100"
-        Leaving: "duration-150 ease-in"
-          From: "opacity-100"
-          To: "opacity-0"
-      -->
-      <div class="z-20 fixed inset-0 bg-black bg-opacity-25" aria-hidden="true"></div>
-
-      <!--
-        Mobile menu, show/hide based on mobile menu state.
-
-        Entering: "duration-150 ease-out"
-          From: "opacity-0 scale-95"
-          To: "opacity-100 scale-100"
-        Leaving: "duration-150 ease-in"
-          From: "opacity-100 scale-100"
-          To: "opacity-0 scale-95"
-      -->
-      <div class="z-30 absolute top-0 inset-x-0 max-w-3xl mx-auto w-full p-2 transition transform origin-top">
-        <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y divide-gray-200">
-          <div class="pt-3 pb-2">
-            <div class="flex items-center justify-between px-4">
-              <div>
-                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow">
-              </div>
-              <div class="-mr-2">
-                <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                  <span class="sr-only">Close menu</span>
-                  <!-- Heroicon name: outline/x -->
-                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="mt-3 px-2 space-y-1">
-              <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Home</a>
-              <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Profile</a>
-              <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Resources</a>
-              <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Company Directory</a>
-              <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Openings</a>
-            </div>
-          </div>
-          <div class="pt-4 pb-2">
-            <div class="flex items-center px-5">
-              <div class="flex-shrink-0">
-                <img class="h-10 w-10 rounded-full" src="https://www.doyonutilities.com/wp-content/uploads/profile-icon.png" alt="">
-              </div>
-              <div class="ml-3 min-w-0 flex-1">
-                <div class="text-base font-medium text-gray-800 truncate">Tom Cook</div>
-                <div class="text-sm font-medium text-gray-500 truncate">tom@example.com</div>
-              </div>
-              <button type="button" class="ml-auto flex-shrink-0 bg-white p-1 text-gray-400 rounded-full hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                <span class="sr-only">View notifications</span>
-                <!-- Heroicon name: outline/bell -->
-                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-                </svg>
-              </button>
-            </div>
-            <div class="mt-3 px-2 space-y-1">
-              <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Your Profile</a>
-
-              <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Settings</a>
-
-              <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Sign out</a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="z-20 fixed inset-0 bg-black bg-opacity-0" aria-hidden="true"></div>
     </div>
   </header>
   <main class="-mt-24 pb-8">
@@ -195,24 +73,22 @@
             <div class="rounded-lg bg-white overflow-hidden shadow">
               <div class="p-6" >
                 <!-- Code here below the chart visualization -->
-                
-                <bar v-if="loadchart===true"/>
-
-
+                <bar v-if="loadchart===true" :exercise="exercise"/>
               </div>
             </div>
           </section>
         </div>
-
         <!-- Right column -->
+
+       
         <div class="grid grid-cols-1 gap-4">
           <section aria-labelledby="section-2-title">
             <h2 class="sr-only" id="section-2-title">Section title</h2>
             <div class="rounded-lg bg-white overflow-hidden shadow">
-              <div class="p-6">
-              
+              <div class="p-6">         
 <div>
   <div class="flow-root mt-6">
+    
     <ul role="list"  class="-my-5 divide-y divide-gray-200">
       <li class="py-4" v-for="exercise in exerciseList" :key="exercise.name">
         <div class="flex items-center space-x-4">
@@ -256,7 +132,6 @@
   </footer>
 </div>
 </template>
-
 <script>
 import Bar from "./Bar.vue";
 
@@ -267,6 +142,7 @@ export default {
   },
   data() {
     return {
+      exercise : "",
       loadchart : false,
      exerciseList : [
                {name : "Push Up",
@@ -287,6 +163,7 @@ export default {
    },
    showChart(exercise){
        console.log(exercise)
+        this.exercise = exercise.name
        this.loadchart=true
      //Code the function to show the chart
    }

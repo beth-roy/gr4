@@ -193,8 +193,10 @@
           <section aria-labelledby="section-1-title">
             <h2 class="sr-only" id="section-1-title">Section title</h2>
             <div class="rounded-lg bg-white overflow-hidden shadow">
-              <div class="p-6">
+              <div class="p-6" >
                 <!-- Code here below the chart visualization -->
+                
+                <bar v-if="loadchart===true"/>
 
 
               </div>
@@ -256,10 +258,16 @@
 </template>
 
 <script>
+import Bar from "./Bar.vue";
+
 export default {
   name: "ProgressForm",
+    components: {
+    Bar
+  },
   data() {
     return {
+      loadchart : false,
      exerciseList : [
                {name : "Push Up",
         type : "CONCENTRIC",
@@ -279,6 +287,7 @@ export default {
    },
    showChart(exercise){
        console.log(exercise)
+       this.loadchart=true
      //Code the function to show the chart
    }
   }
